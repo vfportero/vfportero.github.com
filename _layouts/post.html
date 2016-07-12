@@ -4,21 +4,29 @@ layout: default
 <div class="post">
   <header>
     <h5 class="subheader">
-      {% assign d = page.date | date: "%d" | plus:'0' %}
-      {{ page.date | date: "%B" }}
-      {% case d %}
-      {% when 1 or 21 or 31 %}{{ d }}st,
-      {% when 2 or 22 %}{{ d }}nd,
-      {% when 3 or 23 %}{{ d }}rd,
-      {% else %}{{ d }}th,
-      {% endcase %}
-      {{ page.date | date: "%Y" }}
+     {% assign m = page.date | date: "%-m" %}
+{{ page.date | date: "%-d" }}
+{% case m %}
+  {% when '1' %}Enero
+  {% when '2' %}Febrero
+  {% when '3' %}Marzo
+  {% when '4' %}Abril
+  {% when '5' %}Mayo
+  {% when '6' %}Junio
+  {% when '7' %}Julio
+  {% when '8' %}Agosto
+  {% when '9' %}Septiembre
+  {% when '10' %}Octubre
+  {% when '11' %}Noviembre
+  {% when '12' %}Diciembre
+{% endcase %}
+{{ page.date | date: "%Y" }}
     </h5>
     <h1>{{ page.title }}</h1>
     <!-- Categories -->
     <div class="categories">
       {% unless page.categories == empty %}
-        Posted in:
+        Publicado en:
         <ul class="categories-list">
           {% assign categories_list = page.categories %}
           {% if categories_list.first[0] == null %}
@@ -46,7 +54,7 @@ layout: default
 
   <div class="tags">
     {% unless page.tags == empty %}
-      Tagged with:
+      Tags::
       <ul class="list-inline">
         {% assign tags_list = page.tags %}
         {% if tags_list.first[0] == null %}
@@ -74,7 +82,7 @@ layout: default
 
   <div class="mdl-grid">
     <section class="share mdl-cell mdl-cell--6-col">
-      <h4>Share Post</h4>
+      <h4>Compartir</h4>
 
 
       <a id="twitter" class="mdl-button mdl-button--primary twitter" href="http://twitter.com/share?text={{page.title | encode}}{% if site.author.twitter%}&via={{site.author.twitter}}{% endif %}"
@@ -114,16 +122,25 @@ layout: default
 
     {% if site.author %}
       <section class="mdl-cell mdl-cell--6-col author">
-        <h4>Author</h4>
+        <h4>Autor</h4>
         <div class="mdl-grid">
           <div class="mdl-cell mdl-cell--3-col author-avatar">
             <img src="http://www.gravatar.com/avatar/{{site.email_md5}}?s=75" />
           </div>
           <div class="mdl-cell mdl-cell--9-col">
             <h5 class="section-title author-name">
-              {{site.author}}
+              {{site.author.name}}
             </h5>
-            <p class="author-bio">{{site.bio}}</p>
+            <p class="author-bio">
+              <a href="http://www.twitter.com/{{site.author.twitter}}" class="mdl-button mdl-button--primary twitter">
+              <span class="icon">
+                  <svg viewBox="0 0 16 16">
+            <path style="fill: #5EA9DD" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+            c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/><!--[if lt IE 9]><em>Twitter</em><![endif]-->
+          </svg>@{{site.author.twitter}}</a>
+            </span>
+              {{site.bio}}
+              </p>
           </div>
         </div>
       </section>
@@ -133,17 +150,17 @@ layout: default
   <div class="mdl-grid pagination">
     <div class="mdl-cell mdl-cell--6-col previous">
       {% if page.previous %}
-        <a class="mdl-button mdl-button--primary" href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous Post</a>
+        <a class="mdl-button mdl-button--primary" href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Post Anterior</a>
       {% else %}
-        <a class="mdl-button mdl-button--primary" disabled>&larr; Previous Post</a>
+        <a class="mdl-button mdl-button--primary" disabled>&larr; Post Anterior</a>
       {% endif %}
     </div>
 
     <div class="mdl-cell mdl-cell--6-col next">
       {% if page.next %}
-        <a class="mdl-button mdl-button--primary" href="{{ page.next.url }}" title="{{ page.next.title }}">Next Post &rarr;</a>
+        <a class="mdl-button mdl-button--primary" href="{{ page.next.url }}" title="{{ page.next.title }}">Siguiente Post &rarr;</a>
       {% else %}
-        <a class="mdl-button mdl-button--primary" disabled>Next Post &rarr;</a>
+        <a class="mdl-button mdl-button--primary" disabled>Siguiente Post &rarr;</a>
       {% endif %}
     </div>
   </div>
