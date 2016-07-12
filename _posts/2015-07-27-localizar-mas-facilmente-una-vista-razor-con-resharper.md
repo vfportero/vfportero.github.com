@@ -18,7 +18,7 @@ Resharper tiene una opción para refactorizar un string y moverlo a un fichero d
 
 Investigando un poco he encontrado un pequeño truco que permite convertir un trozo del HTML en “código interpretado” por el compilador y así poder recfactorizarlo a recurso: crear un **surround template:**
 
-[![Template Explorer](http://www.compilando.es/wp-content/uploads/2015/07/TemplateExplorer.png)](http://www.compilando.es/wp-content/uploads/2015/07/TemplateExplorer.png)
+[![Template Explorer](http://res.cloudinary.com/escapistasclub/image/upload/v1468336237/Compilando/TemplateExplorer.png)](http://res.cloudinary.com/escapistasclub/image/upload/v1468336237/Compilando/TemplateExplorer.png)
 
 ## Creando el Surround Template
 
@@ -28,7 +28,7 @@ Para nuestra pequeña “trampa” necesitamos crear uno que envuelva el texto s
 
 Para ello seleccionamos en el Template Explorer la opción de “Surround Templates” en los tabs de arriba, elegimos el scope “Razor” y pulsamos en “New Template”:
 
-[![New Surround Template](http://www.compilando.es/wp-content/uploads/2015/07/NewSurroundTemplate.png)](http://www.compilando.es/wp-content/uploads/2015/07/NewSurroundTemplate.png)
+[![New Surround Template](http://res.cloudinary.com/escapistasclub/image/upload/v1468336227/Compilando/NewSurroundTemplate.png)](http://res.cloudinary.com/escapistasclub/image/upload/v1468336235/Compilando/NewSurroundTemplate.png)
 
 Esto nos abrirá una ventana para que peguemos el código del template y le demos un nombre. Yo lo he llamado “_@” (si, lo sé, super original..)_
 
@@ -44,7 +44,7 @@ Bien, con esto ya tenemos el surround template listo y tan solo tenemos que usar
 
 Tenemos un texto en un h2 que queremos incluir en el fichero de recursos lo más rápido posible.
 
-[![h2](http://www.compilando.es/wp-content/uploads/2015/07/h2.png)](http://www.compilando.es/wp-content/uploads/2015/07/h2.png)
+[![h2](http://res.cloudinary.com/escapistasclub/image/upload/v1468336230/Compilando/h2.png)](http://res.cloudinary.com/escapistasclub/image/upload/v1468336230/Compilando/h2.png)
 
 Hacerlo de la forma “tradicional” implicaría ir al fichero de recursos, añadir uno nuevo, darle un nombre, copiar&pegar este texto, clonarlo para el resto de idiomas, localizar en cada idioma y volver a la vista de razor para sustituir el texto por la llamada al fichero de recursos: **un coñazo**.
 
@@ -52,15 +52,15 @@ Con surround template (y con los benditos shortcuts!):
 
 1) _CTRL + W_ hasta seleccionar toda la frase a localizar:
 
-[![h2_1](http://www.compilando.es/wp-content/uploads/2015/07/h2_1.png)](http://www.compilando.es/wp-content/uploads/2015/07/h2_1.png)
+[![h2_1](http://res.cloudinary.com/escapistasclub/image/upload/v1468336230/Compilando/h2_1.png)](http://res.cloudinary.com/escapistasclub/image/upload/v1468336230/Compilando/h2_1.png)
 
 2) _CTRL + E , J_: Surround with: @:
 
-[![h2_2](http://www.compilando.es/wp-content/uploads/2015/07/h2_2.png)](http://www.compilando.es/wp-content/uploads/2015/07/h2_2.png)
+[![h2_2](http://res.cloudinary.com/escapistasclub/image/upload/v1468336230/Compilando/h2_2.png)](http://res.cloudinary.com/escapistasclub/image/upload/v1468336230/Compilando/h2_2.png)
 
 3) _CTRL + R, O_: Refactor, Move To:
 
-[![RefactorMoveTo](http://www.compilando.es/wp-content/uploads/2015/07/RefactorMoveTo.png)](http://www.compilando.es/wp-content/uploads/2015/07/RefactorMoveTo.png)
+[![RefactorMoveTo](http://res.cloudinary.com/escapistasclub/image/upload/v1468336235/Compilando/RefactorMoveTo.png)](http://res.cloudinary.com/escapistasclub/image/upload/v1468336235/Compilando/RefactorMoveTo.png)
 
 ¡voilá! Resharper se encarga el solo de crear el recurso (en el fichero que le digas), sustituirlo en el Razor y dejarlo listo para clonarlo en el resto de idiomas.
 
@@ -73,7 +73,7 @@ En el explorador de soluciones seleccionamos el proyecto y, en sus **propiedades
 *   _Localizable: True_
 *   _Localizable inspector: Pessimistic_
 
-[![ResharperLocalizationProperties](http://www.compilando.es/wp-content/uploads/2015/07/ResharperLocalizationProperties1.png)](http://www.compilando.es/wp-content/uploads/2015/07/ResharperLocalizationProperties1.png)
+[![ResharperLocalizationProperties](http://res.cloudinary.com/escapistasclub/image/upload/v1468336237/Compilando/ResharperLocalizationProperties1.png)](http://res.cloudinary.com/escapistasclub/image/upload/v1468336237/Compilando/ResharperLocalizationProperties1.png)
 
 Con esto habilitamos la opción de Refactor > Move To Resources en el menú de acceso rápido con **ALT+ENTER** lo cual hace el paso 3 mucho más rápido:
 
