@@ -10,7 +10,7 @@ permalink: /:year/:month/:day/:title/
 markdown: kramdown
 paginate: 5 # pagination based on number of posts
 paginate_path: "page/:num"
-highlighter: pygments
+highlighter: rouge
 gems: [jekyll-paginate, jekyll-coffeescript]
 
 # comments
