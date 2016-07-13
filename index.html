@@ -6,20 +6,33 @@ layout: default
     <div class="post">
       <div class="header">
         <h5 class="subheader">
-          {% assign d = post.date | date: "%d" | plus:'0' %}
-          {{ post.date | date: "%B" }}
-          {% case d %}
-          {% when 1 or 21 or 31 %}{{ d }}st,
-          {% when 2 or 22 %}{{ d }}nd,
-          {% when 3 or 23 %}{{ d }}rd,
-          {% else %}{{ d }}th,
-          {% endcase %}
-          {{ post.date | date: "%Y" }}
+     {% assign m = page.date | date: "%-m" %}
+{{ page.date | date: "%-d" }}
+{% case m %}
+  {% when '1' %}Enero
+  {% when '2' %}Febrero
+  {% when '3' %}Marzo
+  {% when '4' %}Abril
+  {% when '5' %}Mayo
+  {% when '6' %}Junio
+  {% when '7' %}Julio
+  {% when '8' %}Agosto
+  {% when '9' %}Septiembre
+  {% when '10' %}Octubre
+  {% when '11' %}Noviembre
+  {% when '12' %}Diciembre
+{% endcase %}
+{{ page.date | date: "%Y" }}
         </h5>
-        <h1>{{ post.title }}</h1>
+      
+          <a class="mdl-navigation__link" href="{{ post.url | replace_first: '/', '' | prepend: site.baseurl | prepend: site.url }}">
+              <h1>{{ post.title }}</h1>
+          </a>
       </div>
       {{ post.content | truncatewords:75}}
-      <a class="mdl-button mdl-button--accent" href="{{ post.url | replace_first: '/', '' | prepend: site.baseurl | prepend: site.url }}">Leer más</a>
+      <div>
+        <a class="mdl-button mdl-button--accent" href="{{ post.url | replace_first: '/', '' | prepend: site.baseurl | prepend: site.url }}">Leer más</a>
+      </div>  
     </div>
   {% endfor %}
 
