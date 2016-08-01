@@ -8,7 +8,7 @@ tags: [Nuget, Qunit, TDD, Teamcity, PhantomJS, Test, Tutorial]
 
 Como comentaba en el [anterior post](http://www.compilando.es/post/2012/06/21/Testeo-de-javascriptjquery-desde-Visual-Studio-usando-QUnit-NQUnit.aspx) estoy investigando sobre **testeo de Javascript/Jquery desde Visual Studio** y para ello he optado por usar el framework **QUnit**.
 
-Después de las primeras pruebas y solventar los primeros problemas (sobre todo como “mockear” las llamadas ajax o ciertas peticiones a nivel de servidor) ha llegado el momento de añadir a nuestro **servidor de integración continua** (en nuestro caso el **TeamCity**) un nuevo paso para que ejecute automáticamente estos tests cada vez que alguien haga un commit.+
+Después de las primeras pruebas y solventar los primeros problemas (sobre todo como “mockear” las llamadas ajax o ciertas peticiones a nivel de servidor) ha llegado el momento de añadir a nuestro **servidor de integración continua** (en nuestro caso el **TeamCity**) un nuevo paso para que ejecute automáticamente estos tests cada vez que alguien haga un commit.
 
 El problema de esto radica en que TeamCity no dispone de un driver nativo para ejecutar QUnit ni para lanzar un navegador y leer los resultados así que para que los tests de QUnit se ejecuten como un test más necesitamos:
 
