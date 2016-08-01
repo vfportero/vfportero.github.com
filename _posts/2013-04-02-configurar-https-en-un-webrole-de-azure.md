@@ -3,7 +3,7 @@ layout: post
 title:  "Configurar HTTPS en un WebRole de Azure"
 date:   2013-04-02
 categories: [Azure]
-tags: [Azure, Certificate, PFX,ServiceDefinition, SSL,Tutorial,WebRolse]
+tags: [Azure, Certificate, PFX,ServiceDefinition, SSL,Tutorial,WebRole]
 ---
 
 Parece mentira pero algo tan sencillo como permitir el acceso por **HTTPS** con un **dominio personalizado** en **Azure** es algo que no es trivial.
