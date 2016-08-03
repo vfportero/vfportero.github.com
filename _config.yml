@@ -14,7 +14,7 @@ highlighter: rouge
 gems: [jekyll-paginate, jekyll-coffeescript]
 
 # comments
-disqus: compilandoes
+disqus: compilando-es
 
 # author info
 # add your appropriate info here
