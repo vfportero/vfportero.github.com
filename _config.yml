@@ -31,7 +31,8 @@ github_username: vfportero
 
 # Theming options
 # These settings are mandatory.
-theme:              'blue-pink'
+#theme:              'blue-pink'
+theme: 'minima'
 # drawer theming
 drawer:
   text_color:       'grey-600'
