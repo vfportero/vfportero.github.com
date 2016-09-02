@@ -55,7 +55,7 @@ El resultado debe de ser algo similar a esto:
 
 ![](http://res.cloudinary.com/escapistasclub/image/upload/v1470036642/Compilando/teamcity-qunit.png)
 
-Una vez hecho esto ya podremos **ejecutar el Build** y veremos como los tests se ejecutan de forma habitual como si fueran de NUnit indicandonos en verde o rojo el resultado de los mismos ![:)](http://www.compilando.es/wp-includes/images/smilies/simple-smile.png)
+Una vez hecho esto ya podremos **ejecutar el Build** y veremos como los tests se ejecutan de forma habitual como si fueran de NUnit indicandonos en verde o rojo el resultado de los mismos !:-)
 
 Espero que os sea útil.
 

@@ -13,7 +13,7 @@ Por ese mismo motivo he visto que sería interesante dedicar una entrada a **exp
 
 Lo primero de todo confesar que **no soy un experto en la materia** y por ello es de obligada necesidad indicar que, si quereis profundizar más en estos temas, vayais a la web **“[www.dirigidoportests.com](http://www.dirigidoportests.com/)“** de **[Carlos Blé](https://twitter.com/#!/carlosble)**, autor de “**[Diseño Ágil con TDD](http://www.dirigidoportests.com/el-libro)**” el libro de cabecera de todo aquel desarrollador que quiera empezar a trabajar con esta metodología.
 
-Además dar las gracias encarecidamente a **[Javier Casal](https://twitter.com/jcasalruiz)** por darme las clases magistrales de TDD y la gente de **[12Meses12Katas](http://12meses12katas.com/)** por el ejemplo práctico para compartir con todos vosotros ![:)](http://www.compilando.es/wp-includes/images/smilies/simple-smile.png)
+Además dar las gracias encarecidamente a **[Javier Casal](https://twitter.com/jcasalruiz)** por darme las clases magistrales de TDD y la gente de **[12Meses12Katas](http://12meses12katas.com/)** por el ejemplo práctico para compartir con todos vosotros !:-)
 
 ## ¿Qué es TDD (Test Driven Development)?
 

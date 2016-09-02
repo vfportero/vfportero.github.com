@@ -113,6 +113,6 @@ Como veis, se crea un **nuevo EndPoint** con el protocolo **https** apuntando al
   </Role>
 </ServiceConfiguration>
 ```
-En este caso, en la configuración Cloud de nuestra web _“Compilando.WebRole”_ indicamos que el certificado llamado _“www.compilando.es”_ tiene el **Thumbprint** que hemos copiado del panel de control de Azure. Con esto ya podríamos **publicar el WebRole** (recordando **subir los cscfg y csdef actualizados**) para que use el nuevo certificado y ya podríamos visitar nuestra web _https://www.compilando.es_ sin problema alguno ![:)](http://www.compilando.es/wp-includes/images/smilies/simple-smile.png)
+En este caso, en la configuración Cloud de nuestra web _“Compilando.WebRole”_ indicamos que el certificado llamado _“www.compilando.es”_ tiene el **Thumbprint** que hemos copiado del panel de control de Azure. Con esto ya podríamos **publicar el WebRole** (recordando **subir los cscfg y csdef actualizados**) para que use el nuevo certificado y ya podríamos visitar nuestra web _https://www.compilando.es_ sin problema alguno !:-)
 
 **¡Nos vemos Compilando!**

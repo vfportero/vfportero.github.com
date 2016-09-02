@@ -196,7 +196,7 @@ El resultado es una web similar a esta con todos los test organizados por módul
 
 [![](http://res.cloudinary.com/escapistasclub/image/upload/v1470037485/Compilando/qunit_web.png)](http://res.cloudinary.com/escapistasclub/image/upload/v1470037485/Compilando/qunit_web.png)
 
-Con esto ya sabemos la base para empezar a chapurrear tests de javascript en nuestro Visual Studio ![:)](http://www.compilando.es/wp-includes/images/smilies/simple-smile.png)
+Con esto ya sabemos la base para empezar a chapurrear tests de javascript en nuestro Visual Studio !:-)
 
 En la próxima entrega hablaremos sobre como lanzar estos tests desde un servidor de integración continua (como TeamCity) y calcular el Code Coverage.
 
