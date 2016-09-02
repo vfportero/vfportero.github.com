@@ -5,7 +5,7 @@ date:   2011-10-07
 categories: [MySql]
 tags: [MySql, Bases de datos, réplica, sysadmin, tutorial]
 ---
-Sé que este artículo se aleja un poco de lo que suelo escribir por aquí pero la clase magistral que me ha dado mi gran amigo [**Pedro Sanz**](https://twitter.com/#!/MurielSG1 "El Twitter de Pedro") sobre MySql bien se merece una entrada en el blog ![:-)](http://www.compilando.es/wp-includes/images/smilies/simple-smile.png)
+Sé que este artículo se aleja un poco de lo que suelo escribir por aquí pero la clase magistral que me ha dado mi gran amigo [**Pedro Sanz**](https://twitter.com/psanzm "El Twitter de Pedro") sobre MySql bien se merece una entrada en el blog ! :-)
 
 Hoy hemos tenido que montar para un cliente un servidor de **réplica de MySql** en el que era imperioso que los datos se **espejeran de forma inmediata entre el servidor maestro y el esclavo**.
 

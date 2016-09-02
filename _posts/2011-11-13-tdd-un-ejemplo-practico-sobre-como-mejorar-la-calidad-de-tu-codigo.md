@@ -182,7 +182,7 @@ Si logras crear pruebas simples que explican una pequeña parte del código podr
 
 Está claro que **escribir pruebas antes de programar es un trabajo extra** que en muchos casos no se puede asumir pero, **a la larga, ahorra mucho tiempo en mantenimiento** **y evita problemas de código heredado.**
 
-**TDD**, como otras herramientas dentro del **agilismo**, solo te da una serie de “**buenas practicas**” que te ayudan a mejorar tu calidad como desarrollador. **Está en tu mano decidir hasta que punto utilizar TDD** ![:-)](http://www.compilando.es/wp-includes/images/smilies/simple-smile.png)
+**TDD**, como otras herramientas dentro del **agilismo**, solo te da una serie de “**buenas practicas**” que te ayudan a mejorar tu calidad como desarrollador. **Está en tu mano decidir hasta que punto utilizar TDD** !:-)
 
 Para terminar solo invitar a todos aquellos interesados en este tema a que se pasen por la web de **[12Meses12Katas](http://12meses12katas.com/) **donde encontraran ejemplos y soluciones a problemas como este “KataPotter” que hemos explicado aquí. Os recomiendo que os junteis con ese amigo programador con el que siempre haceis el friki, compreis una caja de cervezas, y empeceis a trabajar con una de estas Katas en parejas.
 
