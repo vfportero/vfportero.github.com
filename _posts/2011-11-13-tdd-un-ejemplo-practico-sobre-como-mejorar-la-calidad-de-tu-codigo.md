@@ -41,7 +41,7 @@ Como entrada recibiremos un array con los códigos de los libros a comprar (de 0
 
 Lo primero que debemos hacer es **escribir unas pruebas sencillas que implementen los casos más básicos**. La primera y más sencilla es que cuando nuestra cesta de compra esté vacia el precio total es 0\. En NUnit sería así:
 
-```c#
+```csharp
 [Test]
 public void EmptyBasket()
 {
@@ -53,7 +53,7 @@ Sin entrar en explicar la sintaxis de NUnit simplemente indicar que esta prueba 
 
 **¿Cómo resolvemos esta prueba con la menor cantidad de código posible?** Muy fácil:
 
-```c#
+```csharp
 public double CalculateBasket(int[] books)
 {
      return 0;
@@ -64,7 +64,7 @@ public double CalculateBasket(int[] books)
 
 ¡Ok! Vamos ha añadir una nueva prueba para indicar una nueva condición impuesta por el cliente: **Cada libro vale 8€**
 
-```c#
+```csharp
 [Test]
 public void TwoSameBook()
 {
@@ -74,7 +74,7 @@ public void TwoSameBook()
 
 En esta prueba indicamos que si se compran dos veces el libro “0” el precio total es de 16€. **¿Cómo modificamos nuestro método para que pase las dos pruebas?**
 
-```c#
+```csharp
 public double CalculateBasket(int[] books)
 {
      return books.Length * 8;
@@ -87,7 +87,7 @@ public double CalculateBasket(int[] books)
 
 Nuestro cliente nos había puesto como premisa que, si se compraban dos o más libros distintos había que aplicar un descuento determinado por lo que vamos a crear una serie de pruebas de ejemplo que implementen esta funcionalidad:
 
-```c#
+```csharp
 [Test]
 public void TwoDifferentBooks()
 {
@@ -107,7 +107,7 @@ La solución que se me ha ocurrido a mi es hacer una clase “BookPack” que si
 
 Sin tener en cuenta la última condición (que indicaba que se ha de escoger la combinación más económica), la solución más sencilla es esta:
 
-```c#
+```csharp
 List<BookPack> BookPacks = new List<BookPack>();
 
 foreach (int bookCode in books)
@@ -136,7 +136,7 @@ return BookPacks.Sum(bookPack => BookPack.GetBookPackPrice(bookPack.Books.Count)
 
 Donde “GetBookPackPrice” devuelve el precio del paquete en función de cuantos libros tiene:
 
-```c#
+```csharp
 public static double GetBookPackPrice(int quantity)
         {
             return 8 * quantity * GetDiscountPerDifferentBooks(quantity);
@@ -152,7 +152,7 @@ No es lo mismo hacer dos paquetes de 4 libros (51.2€ en total) que 1 de 5 y ot
 
 Para añadir esta nueva funcionalidad vamos a escribir la última prueba:
 
-```c#
+```csharp
 [Test]
 public void SeveralDiscountsFourFour()
 {
